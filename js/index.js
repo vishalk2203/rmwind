@@ -3,8 +3,8 @@
  */
 var $=function element(ref){return document.querySelector(ref);}
 
-var assureAcademy;
-assureAcademy = {
+var INROLABS;
+INROLABS = {
     windowHeight: window.innerHeight + "px",
     windowWidth: window.innerWidth + "px",
     contact: "contact",
@@ -26,7 +26,7 @@ assureAcademy = {
             document.querySelector('li[data-type="course"]').click();
            // this.coursePage(this.course);
             // $('.dummy-video-tag').classList.add("display-block");
-            // //$('.dummy-video-tag').style.height=assureAcademy.windowHeight;
+            // //$('.dummy-video-tag').style.height=INROLABS.windowHeight;
             // $('.dummy-video-tag').removeAttribute("pause");
             // $('.dummy-video-tag').play();
         },this);
@@ -109,23 +109,24 @@ assureAcademy = {
             "<div class='map-container'><div id='map'></div></div>" +
             "<div class='contact-information-container'>" +
             "<div class='address-information'>" +
-            "<div class='address-info-blk'>Address</div><div class='address-info-blk'>15/43, Dr.Alagappa Road</div>" +
-            "<div class='address-info-end'>Purasawalkam, Chennai - 600 084.</div>" +
+            "<div class='address-info-blk'>Address</div><div class='address-info-blk'>100 Mahalingapuram Main Road,</div>" +
+            "<div class='address-info-end'>Nungambakkam,Chennai 600 034.</div>" +
             "</div>" +
-            "<div class='telephone-information'>" +
-                "<div class='tel-info-blk'>TEL</div>" +
-                "<div class='tel-info-blk'>75501 00848 / 90948 45424</div>" +
-            "</div>" +
+           
             "<div class='mail-information'>" +
-                "<div class='mail-info-blk'>Contact</div>" +
-                "<div class='mail-info-blk'>info@assureacademy.com</div>" +
+			 "<div class='mail-info-blk'>Contact</div><div class='mail-info-blk'>9176673434</div>" +
+                
+            "</div>" +
+			 "<div class='mail-information'>" +
+			
+                "<div class='mail-info-blk'>Mail</div><div class='mail-info-blk'>info@inrolabs.co</div>" +
             "</div>" +
             "<div class='share-information'>" +
-                "<span><a href='https://twitter.com/assureacademy_1' target='blank' class='fa fa-twitter' aria-hidden='true'></a></span> " +
-                "<span><a href='https://www.facebook.com/assureacademypvt.ltd' target='blank' class='fa fa-facebook' aria-hidden='true'></a ></span>" +
-                "<span><a href='https://www.linkedin.com/in/assure-academy/' target='blank' class='fa fa-pinterest-p' aria-hidden='true'></a></span>" +
+                "<span><a href='https://twitter.com/inrolabs' target='_blank' class='fa fa-twitter' aria-hidden='true'></a></span> " +
+                "<span><a href='https://www.facebook.com/inrolabs.co/' target='_blank' class='fa fa-facebook' aria-hidden='true'></a ></span>" +
+                "<span><a href='https://www.linkedin.com/company/inrolabs/' target='_blank' class='fa fa-linkedin' aria-hidden='true'></a></span>" +
             "</div>" +
-            "<div class='footer-logo'><a href='#' class='logo-image' title='assureacademy'>Assure Academy</a><div class='footer-copyrights'>Copyright © AssureAcademy. Allright Reserved</div></div>"
+            "<div class='footer-logo'><a href='#' class='logo-image' title='INRO LABS'>INRO LABS</a><div class='footer-copyrights'>Copyright <sup>©</sup>2021 INRO LABS. Allright Reserved</div></div>"
             "</div>" +
             "</div>"
         $('.main-blk').insertAdjacentHTML('beforeend', locateHtml);
@@ -133,7 +134,7 @@ assureAcademy = {
         $('#map').style.height = (window.innerHeight - $('header').offsetHeight) + "px";
         this.loadMap = (function () {
             map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: 13.0817151, lng: 80.25451550000002},
+                center: {lat: 13.0545, lng: 80.2343},
                 zoom: 15,
                 styles: [
                     {
@@ -306,7 +307,7 @@ assureAcademy = {
             var marker = new google.maps.Marker({
                 position: {lat: 13.0817151, lng: 80.25451550000002},
                 map: map,
-                title: 'Assure Academy'
+                title: 'INRO LABS'
             });
         })(this);
 
@@ -314,42 +315,46 @@ assureAcademy = {
     aboutUsPage:function(){
         var aboutus='<div id="aboutus" class="aboutus-container">' +
                         '<div class="about-hero-container">' +
-                            '<div class="abt-hero-text">OUR VALUES DRIVE US</div><h2 style="display:none">Assure Academy</h2>' +
+                            '<div class="abt-hero-text">WE CARE TO SATISFY TECHNOLOGY NEEDS</div><h2 style="display:none">INRO LABS</h2>' +
                         '</div>' +
                         '<div class="abt-hero-content">' +
                             '<div class="about-row">' +
                                 '<p><strong>Who</strong><br>' +
                                 '<strong>We</strong><br>' +
                                 '<strong>Are</strong></p>' +
-                                '<p>Assure Academy Pvt Ltd is a social entrepreneurial venture started by Mrs. Sasikala inthe domain of skill development and training programs. From being a pilot programmeoffered for designing sector, today it is one of India’s largest multi disciplinary trainingacademy. Our prime goal is to give the highest level of training to students and makethem employment ready. We have started this academy with a positive attitude, highlevel of motivation and professionalism for the students to face success in their life inthis competitive world.</p>' +
-                            '</div>' +
+                                '<p>INRO LABS Private Limited., We are a wind energy solutions provider and an Independent power producer (IPP). We have vast expertise in manufacturing wind turbine components, developing wind energy projects and offer turnkey solutions. We have now grown to become one of the coveted business destinations in the country.<br/>We are an energetic and continuously growing company with a futuristic aim to explore energy solutions in solar, biogas and E-mobility sectors. We aim to reduce the dependency on fossil fuel and increase the percentage of power generation from renewable sources, thereby helping the nation to reach our sustainability goals.</p>' +
+								
+                            '<p>&nbsp;</p><p>&nbsp;</p></div>' +
+							'<div class="about-hero-container1">' +
+                            '<div class="abt-hero-text"></div><h2 style="display:none">INRO LABS</h2>' +
+                        '</div>' +
                             '<div class="about-row-second">' +
                                 '<p><strong>Our</strong><br>' +
                                 '<strong>Mission</strong><br>' +
                                 '<strong></strong></p>' +
-                                '<p>Assure Academy endeavors to be a professional, society oriented and progressivetraining body, offering flexible, tailored training and education solutions specificallydesigned to educate, inspire and motivate individuals and businesses helpingprofessionals to reach and achieve their goals and aspirations.</p>' +
+                                '<p>With an experienced and unparalleled track record of aim on the ground, INRO LABS Private Limited, the plan grandmasters of the wind energy sector, have paved the way for wind energy in India and planed leadership in addressing the market environment and providing necessary solutions in the area of wind power generation.</p>' +
                                 '<p><strong>Our</strong><br>' +
                                 '<strong>Vision</strong><br>' +
                                 '<strong></strong></p>' +
-                                '<p>Assure Academy thrives to provide quality education services across a spectrum ofIndividuals to achieve their goals with reliable experience & technology. To become asuccessful education provider of student’s choice for career commencement andprofessional development towards local and international communities.</p>' +
-                            '<p>&nbsp;</p></div>'+
+                                '<p>Becoming one of the best and proven manufacturers of WEGs in India, INRO LABS has also created a strong international presence for its brand and products.</p>' +
+                            '</div>'+
                     '</div>';
         $('.main-blk').insertAdjacentHTML('beforeend', aboutus);
     },
     carreerPage:function(){
-        var carreer='<div id="career" ><div class="contact-banner-text"><h1 class="text-title">Contact Us</h1><p class="text-content contactustext">See how your business can benefit with Assure Academy, on your team!</p> </div> <div class="outerbox"> <form name="contactForm" class="contactForm" method="POST" action=""> <div class="group "> <input type="text" name="firstname" class="inp-con" required="" placeholder=" Name"> </div> <div class="group contact-group"> <div class="area-code"> <input type="text" name="phone" class="inp-con input-phone" required="" placeholder="Area Code"> </div> <div class="phone-number-contact"> <input type="text" name="phone" class="inp-con input-phone" required="" placeholder="Phone number"> </div> </div> <div class="group contact-group"> <input type="email" name="email" class="inp-con" required="" placeholder=" Email ID"> </div> <div class="group "> <textarea class="contact-textarea" placeholder="How can we help you?"></textarea> </div> <div class="job-description submitcontact"> <button type="submit" name="button" class="form-button contact">Submit</button> </div> </form> </div></div>';
+        var carreer='<div id="career" ><div class="contact-banner-text"><h1 class="text-title">Contact Us</h1><p class="text-content contactustext">See how your business can benefit with INRO LABS, on your team!</p> </div> <div class="outerbox"> <form name="contactForm" class="contactForm" method="POST" action=""> <div class="group "> <input type="text" name="firstname" class="inp-con" required="" placeholder=" Name"> </div> <div class="group contact-group"> <div class="area-code"> <input type="text" name="phone" class="inp-con input-phone" required="" placeholder="Area Code"> </div> <div class="phone-number-contact"> <input type="text" name="phone" class="inp-con input-phone" required="" placeholder="Phone number"> </div> </div> <div class="group contact-group"> <input type="email" name="email" class="inp-con" required="" placeholder=" Email ID"> </div> <div class="group "> <textarea class="contact-textarea" placeholder="How can we help you?"></textarea> </div> <div class="job-description submitcontact"> <button type="submit" name="button" class="form-button contact">Submit</button> </div> </form> </div></div>';
         $('.main-blk').insertAdjacentHTML('beforeend', carreer);
     },
     coursePage:function(){
         var course='<div id="course">' +
                     '<main class="course-nav-container">' +
                         '<ul>' +
-                            '<li style="background-image:url(assets/Aviation.jpg)"><a><strong><em><span>Aviation</span></em></strong><video src="assets/Aviation.mp4" loop="loop" muted="muted" preload="auto"></video></a></li>' +
-                            '<li style="background-image:url(assets/Robotics.png)""><a><strong><em><span>Robotics</span></em></strong><video src="assets/roboV.mp4" loop="loop" muted="muted" preload="auto"></video></a></li>' +
-                            '<li style="background-image:url(assets/Medical.jpg)""><a><strong><em><span>Medical</span></em></strong><video src="assets/Medical.mp4" loop="loop" muted="muted" preload="auto"></video></a></li>' +
-                            '<li style="background-image:url(assets/CareerAssistance.png)""><a><strong><em><span>Career Assistance</span ></em></strong><video src="assets/carreerV.mp4" loop="loop" muted="muted" preload="auto"></video></a></li>' +
-                            '<li style="background-image:url(assets/Skill.jpg)""><a><strong><em><span>Skill</span></em></strong><video src="assets/Skill.mp4" loop="loop" muted="muted" preload="auto"></video></a></li>' +
-                            '<li style="background-image:url(assets/comingsoon.jpg)""><a><strong><em><span>Coming Soon</span></em></strong><video loop="loop" muted="muted" preload="auto"></video></a></li>' +
+                             '<li style="background-image:url(assets/Humanoid.jpg)"><a><strong><em><span>Humanoid</span></em></strong><video src="assets/Humanoid.mp4" loop="loop" muted="muted" preload="auto"></video></a></li>' +
+                            '<li style="background-image:url(assets/AMR.png)""><a><strong><em><span>AMR</span></em></strong><video src="assets/roboV.mp4" loop="loop" muted="muted" preload="auto"></video></a></li>' +
+                            '<li style="background-image:url(assets/AGV.jpg)""><a><strong><em><span>AGV</span></em></strong><video src="assets/AGV.mp4" loop="loop" muted="muted" preload="auto"></video></a></li>' +
+                            '<li style="background-image:url(assets/CustomRobot.png)""><a><strong><em><span>Custom Robot</span ></em></strong><video src="assets/carreerV.mp4" loop="loop" muted="muted" preload="auto"></video></a></li>' +
+                            '<li style="background-image:url(assets/HomeAutomation.jpg)""><a><strong><em><span>Home Automation</span></em></strong><video src="assets/Home Automation.mp4" loop="loop" muted="muted" preload="auto"></video></a></li>' +
+                            '<li style="background-image:url(assets/R&D.jpg)""><a><strong><em><span>R & D</span></em></strong><video loop="loop" muted="muted" preload="auto"></video></a></li>' + 
                         '</ul></main></div>';
         $('.main-blk').insertAdjacentHTML('beforeend', course);
         $('.parent-container-blk').classList.add("hidden-blk");
@@ -374,12 +379,12 @@ $('body').onload=function(){
     $('circle').style.display="none";
     $('.parent-container-blk').style.display="block";
     $('.parent-container-blk').style.opacity=1;
-    assureAcademy.contentResizeElements();
-    assureAcademy.landingPageEvents();
+    INROLABS.contentResizeElements();
+    INROLABS.landingPageEvents();
 
 };
 window.addEventListener("resize",function(event){
     console.log(window.innerHeight);
-     assureAcademy.contentResizeElements();
+     INROLABS.contentResizeElements();
 })
 
