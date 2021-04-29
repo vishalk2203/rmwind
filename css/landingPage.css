@@ -61,7 +61,7 @@ header{
 }
 .hero-tag{
     color: #fff;
-    font-size: 85pt;
+    font-size: 75pt;
     font-weight: 400;
     /* height: auto; */
     /* left: 50%; */
@@ -137,9 +137,9 @@ header{
 .logo-image{
     background: transparent url(../assets/logo.png) left center no-repeat;
     /* background-size: 75pt 30px; */
-    background-size: 98pt 55px;
+    background-size: 99pt 50px;
     display: inline-block;
-    height: 42px;
+    height: 49px;
     opacity: .8;
     overflow: hidden;
     text-indent: 100%;
